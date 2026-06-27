@@ -32,7 +32,6 @@ module6_ANN/
 ├── main.py                      # runs everything end to end
 ├── extra_figs.py                # the four figures main.py does not produce
 ├── run_chunk.py                 # optional chunked runner for slow machines
-├── make_figs.py                 # rebuilds figures from cached results
 └── pyproject.toml               # dependencies and Python version
 ```
 
