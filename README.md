@@ -51,6 +51,7 @@ module6_ANN/
 
 `extra_figs.py` produces the four figures `main.py` does not: the before/after chart, the train-versus-validation curves, the precision-recall and threshold sweep, and the permutation feature importance. For the before/after, threshold, and importance plots it loads the saved `best_model.keras` so those figures match the confusion matrix exactly.
 
+.
 ## Setup
 
 This project uses Python 3.12. With `uv`:
@@ -81,7 +82,16 @@ Generate the four extra figures (run this after `main.py`, since it reads the sa
 
 ```bash
 uv run extra_figs.py
+
+
 ```
+Run the subgroup fairness check (run this after `main.py`, since it reads the saved model):
+
+​```bash
+uv run fairness_check.py
+​```
+
+This loads the deployed RMSProp model and prints churn recall and precision by gender and by senior-citizen status.
 
 Run the tests:
 
